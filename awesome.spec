@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.4.13
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -107,6 +107,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Tue Aug 21 2012 Stanislav Ochotnicky <sochotnicky@redhat.com> - 3.4.13-2
+- Rebuilt for libxcb-util soname bump
+
 * Wed Jul 18 2012 Thomas Moschny <thomas.moschny@gmx.de> - 3.4.13-1
 - Update to 3.4.13.
 
