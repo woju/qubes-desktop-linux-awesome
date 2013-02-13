@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.4.14
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -109,6 +109,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.4.14-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
 * Fri Jan  4 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.4.14-1
 - Update to 3.4.14.
 - Update buildrequires.
