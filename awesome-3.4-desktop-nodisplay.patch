@@ -1,0 +1,12 @@
+diff --git a/awesome.desktop b/awesome.desktop
+index 1f7878c..8a7f354 100644
+--- a/awesome.desktop
++++ b/awesome.desktop
+@@ -2,7 +2,6 @@
+ Encoding=UTF-8
+ Name=awesome
+ Comment=Highly configurable framework window manager
+-NoDisplay=true
+ TryExec=awesome
+ Exec=awesome
+ Type=Application
