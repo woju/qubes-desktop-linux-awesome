@@ -56,15 +56,15 @@ Requires:	rlwrap
 
 
 %description
-Awesome is a highly configurable, next generation framework window 
+Awesome is a highly configurable, next generation framework window
 manager for X. It is very fast, light and extensible.
 
-It is primary targeted at power users, developers and any people 
-dealing with every day computing tasks and want to have fine-grained 
+It is primary targeted at power users, developers and any people
+dealing with every day computing tasks and want to have fine-grained
 control on its graphical environment.
 
 
-%package 	doc
+%package	doc
 Summary:	API doc files
 Group:		Documentation
 Requires:	%{name} = %{version}-%{release}
@@ -90,7 +90,7 @@ make -C build VERBOSE=1 %{?_smp_mflags} awesome
 
 
 %install
-make -C build DESTDIR="%{buildroot}" INSTALL="install -p" install 
+make -C build DESTDIR="%{buildroot}" INSTALL="install -p" install
 
 # verify desktop file
 desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
@@ -325,7 +325,7 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 * Thu Jul 17 2008 Michal Nowak <mnowak@redhat.com> 2.3.2-7
 - after some discussion I removed explicit dependency on libconfuse >= 2.6;
-  the thing is that awesome runs fine with libconfuse-2.5 but does not 
+  the thing is that awesome runs fine with libconfuse-2.5 but does not
   build with < 2.6. Some build-time hack might be possible but I am obviously
   not going to be involved in this auto*magic. (thx Hans Ulrich Niedermann)
 
@@ -333,7 +333,7 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 - added libXinerama-devel, hopefully last BuildRequire
 
 * Wed Jul 16 2008 Michal Nowak <mnowak@redhat.com> 2.3.2-5
-- by mistake I removed BuildRequire on libconfuse-devel, 
+- by mistake I removed BuildRequire on libconfuse-devel,
   now is back again (thanks Mamoru Tasaka)
 
 * Tue Jul 15 2008 Michal Nowak <mnowak@redhat.com> 2.3.2-4
