@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.5.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -45,6 +45,7 @@ BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	lua-lgi
 BuildRequires:	pkgconfig(pango) >= 1.19.3
 BuildRequires:	pkgconfig(pangocairo) >= 1.19.3
+Requires:	lua-lgi
 Requires:	pango >= 1.19.3
 
 BuildRequires:	desktop-file-utils
@@ -118,6 +119,9 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 
 %changelog
+* Thu Apr  4 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-2
+- The Lua GObject introspection package is needed at runtime.
+
 * Wed Apr  3 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-1
 - Update to 3.5.1.
 - Rework BR section:
