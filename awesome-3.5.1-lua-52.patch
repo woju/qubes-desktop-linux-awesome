@@ -1,0 +1,23 @@
+diff -up awesome-3.5.1/awesomeConfig.cmake.lua-52 awesome-3.5.1/awesomeConfig.cmake
+--- awesome-3.5.1/awesomeConfig.cmake.lua-52	2013-05-13 09:59:41.739295007 -0400
++++ awesome-3.5.1/awesomeConfig.cmake	2013-05-13 10:00:40.121295883 -0400
+@@ -61,8 +61,8 @@ a_find_program(CONVERT_EXECUTABLE conver
+ include(FindDoxygen)
+ # pkg-config
+ include(FindPkgConfig)
+-# lua 5.1
+-include(FindLua51)
++# lua 5.2
++include(FindLua52)
+ # }}}
+ 
+ # {{{ Check if documentation can be build
+@@ -189,7 +189,7 @@ else()
+ endif()
+ 
+ # Error check
+-if(NOT LUA51_FOUND AND NOT LUA50_FOUND) # This is a workaround to a cmake bug
++if(NOT LUA52_FOUND AND NOT LUA51_FOUND AND NOT LUA50_FOUND) # This is a workaround to a cmake bug
+     message(FATAL_ERROR "lua library not found")
+ endif()
+ 
