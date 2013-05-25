@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.5.1
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -16,7 +16,6 @@ BuildRequires:	cmake >= 2.8.0
 BuildRequires:	ImageMagick
 BuildRequires:	asciidoc
 BuildRequires:	doxygen
-BuildRequires:	gperf
 BuildRequires:	graphviz
 BuildRequires:	lua-devel >= 5.2
 BuildRequires:	lua-ldoc
@@ -123,6 +122,9 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 
 %changelog
+* Sat May 25 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-5
+- Remove obsolete BR on gperf.
+
 * Mon May 20 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 3.5.1-4
 - Set default editor to vi
 - Resolves: rhbz#964945
