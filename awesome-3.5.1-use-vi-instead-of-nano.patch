@@ -1,0 +1,27 @@
+From 35228aecb3fde5a898cf556e619e94b1e71392b1 Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Mon, 20 May 2013 07:33:07 +0200
+Subject: [PATCH] Set default editor to vi
+
+Upstream uses nano as editor, probably because it default in Debian.
+The default text editor in Fedora is vi.
+---
+ awesomerc.lua.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/awesomerc.lua.in b/awesomerc.lua.in
+index 54c42fb..d1dc796 100644
+--- a/awesomerc.lua.in
++++ b/awesomerc.lua.in
+@@ -42,7 +42,7 @@ beautiful.init("@AWESOME_THEMES_PATH@/default/theme.lua")
+ 
+ -- This is used later as the default terminal and editor to run.
+ terminal = "xterm"
+-editor = os.getenv("EDITOR") or "nano"
++editor = os.getenv("EDITOR") or "vi"
+ editor_cmd = terminal .. " -e " .. editor
+ 
+ -- Default modkey.
+-- 
+1.8.1.4
+
