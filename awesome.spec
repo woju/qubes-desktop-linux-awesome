@@ -57,6 +57,8 @@ Requires:	startup-notification >= 0.10
 Requires:	xterm
 # optional but useful
 Requires:	rlwrap
+# default editor
+Requires:	vi
 
 
 %description
@@ -125,6 +127,7 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 %changelog
 * Tue May 28 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-6
+- Add vi as explicit requirement.
 - Add requirement on cairo-gobject, should fix rhbz#959169.
 
 * Sat May 25 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-5
