@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.5.1
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
