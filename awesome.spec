@@ -47,7 +47,9 @@ BuildRequires:	lua-lgi
 BuildRequires:	pkgconfig(pango) >= 1.19.3
 BuildRequires:	pkgconfig(pangocairo) >= 1.19.3
 Requires:	lua-lgi
-Requires:	pango >= 1.19.3
+# next two loaded via lgi
+Requires:	pango%{?_isa} >= 1.19.3
+Requires:	cairo-gobject%{?_isa}
 
 BuildRequires:	desktop-file-utils
 Requires:	startup-notification >= 0.10
@@ -122,6 +124,9 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 
 %changelog
+* Tue May 28 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-6
+- Add requirement on cairo-gobject, should fix rhbz#959169.
+
 * Sat May 25 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-5
 - Remove obsolete BR on gperf.
 
