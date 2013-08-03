@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.5.1
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -126,6 +126,9 @@ mv %{buildroot}%{_docdir}/%{name}-%{version}/doc \
 
 
 %changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.5.1-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Tue May 28 2013 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.1-6
 - Add vi as explicit requirement.
 - Add requirement on cairo-gobject, should fix rhbz#959169.
