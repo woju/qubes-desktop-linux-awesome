@@ -1,7 +1,7 @@
-diff -up awesome-3.5.1/awesomeConfig.cmake.lua-52 awesome-3.5.1/awesomeConfig.cmake
---- awesome-3.5.1/awesomeConfig.cmake.lua-52	2013-05-13 09:59:41.739295007 -0400
-+++ awesome-3.5.1/awesomeConfig.cmake	2013-05-13 10:00:40.121295883 -0400
-@@ -61,8 +61,8 @@ a_find_program(CONVERT_EXECUTABLE conver
+diff -up awesome-3.5.3/awesomeConfig.cmake.lua-52 awesome-3.5.3/awesomeConfig.cmake
+--- awesome-3.5.3/awesomeConfig.cmake.lua-52	2014-03-29 18:17:20.000000000 +0100
++++ awesome-3.5.3/awesomeConfig.cmake	2014-04-02 18:14:57.232099602 +0200
+@@ -64,8 +64,8 @@ a_find_program(CONVERT_EXECUTABLE conver
  include(FindDoxygen)
  # pkg-config
  include(FindPkgConfig)
