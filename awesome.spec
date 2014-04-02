@@ -1,5 +1,5 @@
 Name:		awesome
-Version:	3.5.3
+Version:	3.5.4
 Release:	1%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
@@ -120,6 +120,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Wed Apr  2 2014 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.4-1
+- Update to 3.5.4.
+
 * Wed Apr  2 2014 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.3-1
 - Update to 3.5.3.
 - Remove dependency on libev, and a related patch.
