@@ -1,5 +1,5 @@
 Name:		awesome
-Version:	3.5.4
+Version:	3.5.5
 Release:	1%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
@@ -7,8 +7,8 @@ Group:		User Interface/Desktops
 License:	GPLv2+ and BSD
 URL:		http://awesome.naquadah.org
 Source0:	http://awesome.naquadah.org/download/%{name}-%{version}.tar.xz
-Patch0:		awesome-3.5.3-lua-52.patch
-Patch1:		awesome-3.5.3-use-vi-instead-of-nano.patch
+Patch0:		awesome-3.5.5-lua-52.patch
+Patch1:		awesome-3.5.5-use-vi-instead-of-nano.patch
 
 BuildRequires:	cmake >= 2.8.0
 
@@ -120,6 +120,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Fri Apr 11 2014 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.5-1
+- Update to 3.5.5.
+
 * Wed Apr  2 2014 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.4-1
 - Update to 3.5.4.
 

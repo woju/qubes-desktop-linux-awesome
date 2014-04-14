@@ -9,9 +9,9 @@ The default text editor in Fedora is vi.
  awesomerc.lua.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff -up awesome-3.5.3/awesomerc.lua.in.use-vi-instead-of-nano awesome-3.5.3/awesomerc.lua.in
---- awesome-3.5.3/awesomerc.lua.in.use-vi-instead-of-nano	2014-03-29 18:17:20.000000000 +0100
-+++ awesome-3.5.3/awesomerc.lua.in	2014-04-02 18:12:13.652025715 +0200
+diff -up awesome-3.5.5/awesomerc.lua.in.use-vi-instead-of-nano awesome-3.5.5/awesomerc.lua.in
+--- awesome-3.5.5/awesomerc.lua.in.use-vi-instead-of-nano	2014-04-11 11:07:10.000000000 +0200
++++ awesome-3.5.5/awesomerc.lua.in	2014-04-11 20:52:05.493126617 +0200
 @@ -42,7 +42,7 @@ beautiful.init("@AWESOME_THEMES_PATH@/de
  
  -- This is used later as the default terminal and editor to run.
