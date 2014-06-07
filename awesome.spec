@@ -1,6 +1,6 @@
 Name:		awesome
 Version:	3.5.5
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Highly configurable, framework window manager for X. Fast, light and extensible
 Group:		User Interface/Desktops
 # common/buffer.[ch]: BSD
@@ -120,6 +120,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.5.5-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Fri Apr 11 2014 Thomas Moschny <thomas.moschny@gmx.de> - 3.5.5-1
 - Update to 3.5.5.
 
