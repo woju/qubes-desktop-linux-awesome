@@ -1,3 +1,7 @@
+%if 0%{?qubes_builder}
+%define _sourcedir %(pwd)
+%endif
+
 Name:		awesome
 Version:	3.5.5
 Release:	3%{?dist}
@@ -19,6 +23,7 @@ BuildRequires:	graphviz
 BuildRequires:	lua-devel >= 5.2
 BuildRequires:	lua-ldoc
 BuildRequires:	xmlto
+BuildRequires:	gcc-c++
 
 BuildRequires:	pkgconfig(xcb) >= 1.6
 BuildRequires:	pkgconfig(glib-2.0)
@@ -120,6 +125,9 @@ desktop-file-validate %{buildroot}%{_datadir}/xsessions/%{name}.desktop
 
 
 %changelog
+* Fri Oct 24 2014 Wojciech Porczyk <woju@invisiblethingslab.com> - 3.5.5-3
+- qubes builder features
+
 * Fri Aug 15 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.5.5-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
