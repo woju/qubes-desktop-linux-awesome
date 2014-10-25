@@ -1,0 +1,59 @@
+commit 5d8b124b597a68feddf5c9105ab78722958c4423
+Author: Wojciech Zygmunt Porczyk <woju@invisiblethingslab.com>
+Date:   Sat Oct 25 16:02:49 2014 +0200
+
+    client: add prefix property
+    
+    This patch introduces "prefix" property on clients.
+    It is part of Qubes OS integration.
+    
+    Signed-off-by: Wojciech Zygmunt Porczyk <woju@invisiblethingslab.com>
+
+diff --git a/lib/awful/client.lua.in b/lib/awful/client.lua.in
+index d8e3a10..850bd7f 100644
+--- a/lib/awful/client.lua.in
++++ b/lib/awful/client.lua.in
+@@ -950,6 +950,7 @@ end
+ capi.client.add_signal("property::floating_geometry")
+ capi.client.add_signal("property::floating")
+ capi.client.add_signal("property::dockable")
++capi.client.add_signal("property::prefix")
+ capi.client.add_signal("marked")
+ capi.client.add_signal("unmarked")
+ 
+diff --git a/lib/awful/titlebar.lua.in b/lib/awful/titlebar.lua.in
+index aff3630..a05a151 100644
+--- a/lib/awful/titlebar.lua.in
++++ b/lib/awful/titlebar.lua.in
+@@ -142,9 +142,10 @@ end
+ function titlebar.widget.titlewidget(c)
+     local ret = textbox()
+     local function update()
+-        ret:set_text(c.name or "<unknown>")
++        ret:set_text((aclient.property.get(c, "prefix") or "") .. (c.name or "<unknown>"))
+     end
+     c:connect_signal("property::name", update)
++    c:connect_signal("property::prefix", update)
+     update()
+ 
+     return ret
+diff --git a/lib/awful/widget/tasklist.lua.in b/lib/awful/widget/tasklist.lua.in
+index 27afe1a..606de4a 100644
+--- a/lib/awful/widget/tasklist.lua.in
++++ b/lib/awful/widget/tasklist.lua.in
+@@ -66,6 +66,7 @@ local function tasklist_label(c, args)
+     else
+         name = name .. (util.escape(c.name) or util.escape("<untitled>"))
+     end
++    name = (client.property.get(c, "prefix") or "") .. name
+     if capi.client.focus == c then
+         bg = bg_focus
+         bg_image = bg_image_focus
+@@ -154,6 +155,7 @@ function tasklist.new(screen, filter, buttons, style, update_function, base_widg
+     capi.client.connect_signal("property::skip_taskbar", u)
+     capi.client.connect_signal("property::screen", u)
+     capi.client.connect_signal("property::hidden", u)
++    capi.client.connect_signal("property::prefix", u)
+     capi.client.connect_signal("tagged", u)
+     capi.client.connect_signal("untagged", u)
+     capi.client.connect_signal("unmanage", u)
