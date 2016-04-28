@@ -52,7 +52,7 @@ index 2cd914a..a72088f 100644
  
 -client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 -client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
-+client.connect_signal("focus", function(c) c.border_color = qubes.get_colour_focus(c) end)
++client.connect_signal("focus", function(c) c.border_color = qubes.get_colour_focus(c) c.border_width = 2 end)
 +client.connect_signal("unfocus", function(c) c.border_color = qubes.get_colour(c) end)
 +client.connect_signal("manage", qubes.manage)
  -- }}}
