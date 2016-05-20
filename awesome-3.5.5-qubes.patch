@@ -1,12 +1,16 @@
-commit e9b73c2d92569e244e26b1ab6186e382a3ece816 (HEAD, 3.5-qubes)
-Author: Wojciech Zygmunt Porczyk <woju@invisiblethingslab.com>
-Date:   Sat Oct 25 16:02:49 2014 +0200
+From e9fb7b5ef6d4659b7aec007f776f74891fe90627 Mon Sep 17 00:00:00 2001
+From: Wojtek Porczyk <woju@invisiblethingslab.com>
+Date: Fri, 20 May 2016 13:00:09 +0200
+Subject: [PATCH] Qubes OS integration
 
-    Qubes OS integration
-    
-    Qubes OS library and changes to default config file.
-    
-    Signed-off-by: Wojciech Zygmunt Porczyk <woju@invisiblethingslab.com>
+Qubes OS library and changes to default config file.
+
+Signed-off-by: Wojtek Porczyk <woju@invisiblethingslab.com>
+---
+ awesomerc.lua.in |  24 +++----
+ lib/qubes.lua.in | 193 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 202 insertions(+), 15 deletions(-)
+ create mode 100644 lib/qubes.lua.in
 
 diff --git a/awesomerc.lua.in b/awesomerc.lua.in
 index 2cd914a..a72088f 100644
@@ -58,10 +62,10 @@ index 2cd914a..a72088f 100644
  -- }}}
 diff --git a/lib/qubes.lua.in b/lib/qubes.lua.in
 new file mode 100644
-index 0000000..06bb1fe
+index 0000000..e383acf
 --- /dev/null
 +++ b/lib/qubes.lua.in
-@@ -0,0 +1,192 @@
+@@ -0,0 +1,193 @@
 +----------------------------------------------------------------------------
 +-- Qubes OS bridge
 +-- @copyright 2014 Invisible Things Lab
@@ -161,7 +165,8 @@ index 0000000..06bb1fe
 +    l = math.max(math.min(l * factor, 1), 0)
 +    r, g, b = hls_to_rgb(h, l, s)
 +
-+    return string.format('#%02x%02x%02x', r * 0xff, g * 0xff, b * 0xff)
++    return string.format('#%02x%02x%02x',
++        math.floor(r * 0xff), math.floor(g * 0xff), math.floor(b * 0xff))
 +end
 +
 +function qubes.init()
@@ -254,3 +259,6 @@ index 0000000..06bb1fe
 +return qubes
 +
 +-- vim: ts=4 sw=4 et
+-- 
+2.5.5
+
